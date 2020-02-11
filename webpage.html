@@ -1,92 +1,141 @@
-<!DOCTYPE html>
-
-<html>
-
-<head>
-	<meta charset = 'utf-8'>
-
-<style>
-	div{
-		position: relative;
-		margin-left: 6%;
-		margin-right: 6%;
-		align-content: center;
-		text-align: center;
-		padding-top: 4%;
-		background-color: #000000;
-	}
-li{
-
-	display: inline-block;
-	padding-left: 20%;
-	padding: 20px;
-	float: left;
-	overflow: hidden;
-}
-ul{
-	display: inline;
-}
-
-</style>
-</head>
-
-<body style= "background-color: #4B4943">
-
-<header>
-
-  <nav style="background-color: black; margin-left: 6%; margin-right: 6%; padding: 2%; text-align: left; ">
-   <h1 style="text-align: left; color:grey; background-color: #4B4943;"> To The New </h1>
-
-   <div style="position: relative; background-color: #000000; width: 960px; height: 40px; margin-top: 5%; margin-bottom: 5% ">
-   		<ul style="padding: 12%; list-style-type: none; ">
-    		<li><a href="">Text Link</a></li>
-    		<li><a href="">Text Link</a></li>
-    		<li><a href="">Text Link</a></li>
-   		</ul>
-   </div>
-  
-  </nav> 
-</header>
-
-<div style="background-color: white; position: relative; margin-left: 10%; margin-right: 10%; width: 960px; height: auto; margin-bottom: 0%;">
-	<div style="position: relative; width:960px; height:360px; background-color: black; margin-left: 140px">
+<HTML>
+	<head>
+		<style>
+			#top, #left, #right {
+		position: fixed;
+		}
+		#left, #right {
+			top: 0; bottom: 0;
+			width: 25px;
+			background:#485460;
+			}
 	
-		<h3 style="color: white; align-self: center;">960x360</h3>
+			#left { left: 0; }
+			#right { right: 0; }
+			
+		#top, #bottom {
+			left: 0; right: 0;
+			}
+			#top { top: 0; 
+				background: #1e272e;
+				height:110px;
+				margin-left:25px;
+				margin-right:25px;}
+			#bottom { 
+				height:80px;
+				background:black;}
+			li{
+				display: inline;
+				color:white;
+				font-size: 12px;
+				padding-right: 15px;
+			}
+			.d1{
+				background:black;
+				padding:1px 1px 1px 1px;
+				width:960px;
+				margin-left:9%; 
+				margin-top:7px;
+			}
+			.d2{
+				background:black;
+				margin-left:10%;
+				margin-right:12%px; 
+				margin-top:130px;
+				height:280px;
+				width :960px;
+				color: white;
+				display: inline-block;
+				text-align: center;
+				align-items: center;
+				align-content: center;
+			}
+			.card-outer{
+			border:1px solid gray;
+			display: inline-block;
+			padding: 5px;
+			}
 	
+			.card{
+			background: #1C1C1C;
+			width: 208px;
+			height: 315px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			}
+			 .text{
+			display: inline-block;
+			background: #D8D8D8;
+			margin-bottom: 2%;
+			padding: 5px;
+			display: flex;
+			color: black;
+			justify-content: center;
+			align-items: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id = "left"></div>
+		<div id = "right"></div>
+		<div id = "top">
+		<span style="margin-left:9%;color:white;font-size: 20px;">TO THE NEW</span>
+		<div class="d1">
+		<ul style="">
+			<li>TEXT LINK</li>
+			<li>TEXT LINK</li>
+			<li>TEXT LINK</li>
+			<li>TEXT LINK</li>
+		</ul>
+		</div>
 	</div>
+		<div class="d2"><p style="margin-top:120px;">960x360px</p></div><br>
+		<div style="background: grey;margin-left:10%;margin-right:12%;width:960px;"><p>
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p></div><br>
+		<p style="color:grey; margin-left:10%">LATEST FROM THE GALLERY</p><hr style="margin-left:10%;margin-right:15%">
+		<div style ="margin-left:10% ; margin-right:15%;margin-bottom:10%">
+			<li>
+				  <div class="card-outer">
+					 <div class="card">
+						<span>215 x 315px</span>
+					 </div>
+					 <p class="text"> IMAGE CAPTION HERE</p>
+				  </div>
+			</li>
+			<li>
+				  <div class="card-outer">
+					 <div class="card">
+						<span>215 x 315px</span>
+					 </div>
+					 <p class="text"> IMAGE CAPTION HERE</p>
+				  </div>
+			</li>
+			 <li>
+				  <div class="card-outer">
+					 <div class="card">
+						<span>215 x 315px</span>
+					 </div>
+					 <p class="text"> IMAGE CAPTION HERE</p>
+				  </div>
+			</li>
+			 <li>
+				  <div class="card-outer">
+					 <div class="card">
+						<span>215 x 315px</span>
+					 </div>
+					 <p class="text"> IMAGE CAPTION HERE</p>
+				  </div>
+			</li>
+		</div>
+		<footer class="bottom" style="background: #1C1C1C; height: 80px; padding: 10px; color:white;">
+			<span class="footer-text" style="float: left; margin-left:2%"> Copyright © 2009 - 2017 - All Rights reserved To the new</span>
+			<span class="footer-text" style="float: right; margin-right:2%">Web layout by To the new</p>
+			</span>
+		 </footer>
 	
-	<div style="position: relative; width: 960px; height: 50px; background-color: #9f9c93; margin-left: 140px; margin-top: 20px ">
+		
 	
-	</div>
+	</body>
+	</HTML>
 	
-	<ul>
-		<li>
-			<div style="background-color: #000000; color: white; width: 215px; height: 215px; margin: 0px;">
-				215x315px
-			</div>
-		</li>
-	
-		<li>
-			<div style="background-color: #000000; color: white; width: 215px; height: 215px; margin: 0px;">
-				215x315px
-			</div>
-		</li>
-	
-		<li>
-			<div style="background-color: #000000; color: white; width: 215px; height: 215px; margin: 0px;">
-			215x315px
-			</div>
-		</li>
-	
-		<li>
-			<div style="position: relative; background-color: #000000; color: white; width: 215px; height: 215px; margin: 0px;">
-				215x315px
-			</div>
-		</li>
-	
-	</ul>
-</div>
-
-</body>
-
-</html>
