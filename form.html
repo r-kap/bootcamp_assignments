@@ -1,44 +1,137 @@
-<!DOCTYPE html>
 <html>
-
-
 <head>
-<style type="text/css">
-	select{
-		position: center;
-		display: block;
-		padding-left: 20px;
-		padding-top: 20px;
-		margin-top: 20px;
-		padding-right: 20px;
-	}
+<style>
+	.form-outer{
+	width:450px;
+	height:700px;
+	border:1px solid #000;
+	border-radius: 11px;
+	position:absolute;
+	margin-top: 50px;
+	margin-bottom: 50px;
+    margin-left:400px;
+    margin-top:50px;
+}
+.form-head{
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	background: grey;
+	padding: 20px 10px 20px 20px;
+}
+
+
+input.text{
+	border-radius: 2px;
+	margin-top:10px;
+	width:600px;
+	height: 25px;
+	
+}
+select{
+	margin-top:10px;
+	background: #29c7ac;
+	width: 400px;
+	height: 25px;
+	border-radius: 2px;
+
+}
+.form-foot{
+	background-color: grey;
+}
+input[type="radio"],
+input.radio{
+	display: inline-block;
+}
+.form-in{
+	padding: 10px 10px 10px 10px;
+}
+.button{
+	background-color: #4CAF50;
+	color: white;
+}
+ .custom-file-input::-webkit-file-upload-button {
+        visibility: hidden;
+        }
+        .custom-file-input::before{
+        width: 150;
+        height: 20px;
+        content: 'Choose File';
+        display: inline-block;
+        text-align: right;
+        border: 1px solid #999;
+        border-radius: 5px;
+        padding: 5px 174px;
+        outline: none;
+        font-weight: bold;
+        font-size: 12px;
+        }
 </style>
+
 </head>
-
-
 <body>
-
-<form action="">
-
-	<input type="text" name="Title" required>
-
-	<input type="text-area" name="Description" required>
-
-	<select name="Operating System">
-		<option value="Linux">Linux</option>
-		<option value="Windows">Windows</option>
-		<option value="MacOS">MacOS</option>
-	</select>
-
-
-
-<select  name= "Product">
-		<option value="A">A</option>
-		<option value="B">B</option>
-		<option value="C">C</option>
-	</select>
-
+<div class="header">
+<span style="color:#29c7ac; font-size: 30px;"><a>TO THE NEW</a></span>
+<div class = "header-in" style="float:right; color:#29c7ac;">
+<span style="color:#29c7ac; font-size: 30px;">Home </span>
+<span style="color:#29c7ac; font-size: 30px;">Quick </span>
+<span style="color:#29c7ac; font-size: 30px;">Help</span>
+</div>
+<hr>
+<div class = "form-outer">
+	<header class="form-head"><span style="font-size:20px; color:white;" >Bug Report</span></header>
+	<form class = "form-in">
+		
+		<label>Title:*</label>
+		<br>
+		<input type="text" name="Title" style="width: 400px;">
+		<br><br>
+		<label>Description:*</label>
+		<br>
+		<textarea name="Description" style="width: 400px; border-radius:2px; margin-top: 5px;">	
+		</textarea>
+		<br><br>
+		<label>Operating System:</label>
+		<br>
+		<select>
+			<option>Windows 7</option>
+			<option>Windows 10</option>
+			<option>Linux</option>
+			<option>macOs X</option>
+		</select>
+		<br>
+		<br>
+		<label>Product:*</label>
+		<select>
+			<option>Microsoft Office</option>
+			<option>Open Office </option>
+			<option>Android Studio</option>
+		</select>
+		<br>
+		<br>
+		<label>Version:*</label><br>
+		<textarea></textarea>
+		<br><br>
+		<label>license:
+		</label><br>
+		<input type="radio" name="Free" value="free">Free
+		<span style="margin-left: 150px;"><input type="radio" name="Business" value="Business">Business</span>
+		<br><br>
+		<label>Severity:</label>
+		<select>
+			<option>Critical</option>
+			<option>Average </option>
+			<option>Low</option>
+		</select>
+		<br>
+		<br>
+		<label>Attachments:</label><br>
+		<input type="file" class="custom-file-input">
+		<hr>
+		<footer class="form-foot" style="background-color:red;">
+			<button class ="button" name="send" value="send" style="float:right"> Send</button>
+		</footer>
+	</form>
+	</div>
+</div>
 </body>
-
-
 </html>
