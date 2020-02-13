@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <button onclick="enter_radius()">Enter radius</button>
+    <p id="radius"></p>
+    <button onclick="area()">Calculate area</button>
+    <p id="demo"></p>
+    <p id="answer"></p>
+
+    <script>
+
+        function enter_radius()
+        {
+            var r = prompt("Enter raius of the circle.");
+            document.getElementById("radius").innerHTML=r;
+        }
+
+        function area()
+        {
+            var r =  document.getElementById("radius").innerHTML;
+            //document.getElementById("demo").innerHTML="Hello";
+            var ar = 3.14*r*r;
+            document.getElementById("answer").innerHTML=ar;
+        }
+
+    </script>
+</body>
+</html>

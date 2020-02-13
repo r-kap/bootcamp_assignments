@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <p id="demo"></p>
+        <p id=""></p>
+
+        <script>
+            var ob1=
+            {
+                name: "Rohit",
+                age: 22,
+                competency: "AMC"
+
+            };
+
+            var ob2 = JSON.parse(JSON.stringify(ob1));
+            
+            ob1.name="Ishrat";
+            
+            console.log(ob1);
+            console.log(ob2);
+        </script>
+    </body>
+</html>

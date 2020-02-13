@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <table id="filter">
+
+    </table>
+
+    <script>
+
+        // -- This is first part.-->
+
+        var Employee =
+        [
+            {Name:"Rohit", age: 22, salary: 3000, DOB: "17/02/1998"},
+            {Name:"Ridhima", age: 21, salary: 5000, DOB: "12/02/1998"},
+            {Name:"Naveen", age: 25, salary: 4000, DOB: "03/04/1995"},
+            {Name:"Ishrat", age: 25, salary: 2000, DOB: "27/06/1997"},
+            {Name:"Mark", age: 21, salary: 500, DOB: "12/01/2000"},
+            {Name: "Sonal", age: 20, salary: 3000, DOB: "11/04/2000"}
+        ];
+
+
+        // This is 2nd part.-->
+
+        let x = Employee.filter(data =>{
+            console.log(data.salary>5000);
+            return data.salary>5000;
+            
+        });
+    console.log(x);
+
+    
+    //Part 3.-->
+    const groups= Employee.reduce((Employee, a) => ({
+    ...Employee,
+    [a.age]: [...(Employee[a.age] || []), a]
+    }), {}
+    );
+
+console.log(groups);
+/*
+
+    let b = Employee.filter(data =>{
+        let output= data.filter(d =>{
+            return d.age>20;
+        })
+    });
+*/
+
+    //Part 4: -->
+    var out = [];
+    for(var i =0; i<Employee.length; i++)
+    {
+        if(Employee[i].salary <1000 && Employee[i].age>20)
+            {
+                out.push(Employee[i]);
+            }
+    }
+
+    console.log(out);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+<button onclick="myFunction()">Try it!</button>
+<p id="demo"></p>
+
+<script>
+
+function myFunction()
+{
+    var n = prompt("Enter the palindrome to see if it is a string.");
+    if(typeof n == String)
+    {
+        document.getElementById("demo").innerHTML="Yes it is.";
+        return true;
+    }
+    else
+    {
+        document.getElementById("demo").innerHTML="No it's not.";
+    }
+}
+
+</script>
+
+</body>
+</html>

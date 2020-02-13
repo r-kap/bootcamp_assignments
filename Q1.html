@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<button onclick="ROI()">Calculate ROI</button>
+<p id="demo"></p>
+<script>
+
+function ROI()
+{
+    var rate= prompt("Enter rate of interest");
+    var time= prompt("Enter the time period");
+    var principle= prompt("Enter the principle amount");
+
+    document.getElementById("demo").innerHTML=rate*time*principle*0.01;
+}
+
+</script>
+
+</body>
+
+
+</html>
