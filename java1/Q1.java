@@ -16,7 +16,7 @@ public class Q1
         String s = obj.nextLine();
         String sub = obj.nextLine();
         String add = obj.nextLine();
-        s = s.replace(sub, add);
+        s = s.replace(sub, add);        //replaces the "sub" with "add"
         System.out.println("The new string is: "+ s);
 
     }

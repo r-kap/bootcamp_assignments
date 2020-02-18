@@ -14,6 +14,7 @@ public class Q5
         int min1, min2;
         int i = 0, j = 0;
 
+        //using a HashSet to store the elements of one array.
         Set<Integer> comms = new HashSet<Integer>();
 
         for(int x: arr1)
@@ -21,18 +22,13 @@ public class Q5
             comms.add(x);
         }
 
+        //if the set contains any element of the 2nd array already, we just print them out.
         for(int y : arr2)
         {
             if(comms.contains(y))
             {
                 System.out.println(y);
             }
-        }
-
-
-        while(i < arr1.length && j < arr2.length)
-        {
-
         }
     }
 }

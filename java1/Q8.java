@@ -9,7 +9,11 @@ public class Q8
         Scanner obj = new Scanner(System.in);
         String s = obj.nextLine();
         StringBuffer sb = new StringBuffer(s);
+
+        //buffer reversed
         sb.reverse();
+
+        //replace as needed
         sb = sb.replace(4, 10, "");
         System.out.println(sb.toString());
     }

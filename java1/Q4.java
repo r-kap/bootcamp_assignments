@@ -10,6 +10,8 @@ public class Q4
         String s = obj.next();
         int upper_count=0, lower_count=0, special_count=0, digit_count=0;
 
+        //we just iterate through the String and check for ASCII ranges.
+        //if a char lies in a particular range then we increment the corresponding counter.
         for(char c : s.toCharArray())
         {
             if(c <= 90 && c >=65)

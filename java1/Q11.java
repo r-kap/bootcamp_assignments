@@ -1,12 +1,13 @@
 package Demo.Assignment;
 
-
+//parent class for all the banks
 class Bank
 {
     double rateOfInterest;
     String bankName;
     String branchLocation;
 
+    //parameterized constructor for subclass constructor reference
     public Bank(String b_name, String br_name, double roi)
     {
         this.bankName = b_name;
@@ -14,7 +15,8 @@ class Bank
         this.rateOfInterest = roi;
     }
 
-    public Bank() {
+    public Bank()
+    {
 
     }
 
@@ -26,6 +28,8 @@ class Bank
     }
 }
 
+
+//class SBI
 class SBI extends Bank
 {
     double rateOfInterest;
@@ -48,6 +52,8 @@ class SBI extends Bank
     }
 }
 
+
+//class BOI
 class BOI extends Bank
 {
     double rateOfInterest;
@@ -71,6 +77,8 @@ class BOI extends Bank
 
 }
 
+
+//class ICICI
 class ICICI extends Bank
 {
     double rateOfInterest;
@@ -94,6 +102,8 @@ class ICICI extends Bank
     }
 }
 
+
+//driver code
 public class Q11
 {
     public static void main(String[] args)
