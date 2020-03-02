@@ -1,3 +1,9 @@
+1. Answer to the first question is in SimpleJavaProject_WithoutMaven
+2. Answer to Q4, Q6, Q7 is in this txt file.
+3. Rest of the answers are in the project namedd as MavenDemo.
+
+<----------------------------------------------------------------------------------------------------------------------------->
+
 Q4 -->
 
 plugins- Plugins are the central feature of Maven that allow for the reuse of common build logic across multiple
@@ -34,7 +40,7 @@ version- This tells us the version of the project. Snapshot represents that the 
 When deployed, Snapshot is removed from "version". Version can change with major as well as minor changes.
 
 
-<----------------------------------------------------------------------------------------------------------->
+<------------------------------------------------------------------------------------------------------------------------->
 
 Q6 -->
 
@@ -48,7 +54,7 @@ build time.
 4.Gradle uses a compiler daemon that makes compiling a lot faster.
 
 
-<----------------------------------------------------------------------------------------------------------->
+<------------------------------------------------------------------------------------------------------------------------>
 
 Q7 -->
 
