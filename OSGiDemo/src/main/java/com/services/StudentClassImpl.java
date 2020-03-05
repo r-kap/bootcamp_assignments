@@ -19,13 +19,6 @@ public class StudentClassImpl implements StudentClassService {
     List<Student> students = new ArrayList<>();
 
 
-    @Deactivate
-    public void deactivate(){
-        deleteStudent(1);
-        System.out.println("student deleted");
-        System.out.println("Service shutdown");
-    }
-
     public void addStudents(Student s) {
         if(classConfigurationService.isClassLimitReached(students)){
             System.out.println("Class is full. Remove students to add more.");

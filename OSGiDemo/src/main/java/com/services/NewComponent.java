@@ -1,10 +1,7 @@
 package com.services;
 
 import com.pojos.Student;
-import org.osgi.service.component.annotations.Activate;
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Modified;
-import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.*;
 
 /*
     This is a dummy component to demonstrate how the services are being consumed.
@@ -30,6 +27,13 @@ public class NewComponent {
         System.out.println(studentService.isStudentPassed(1));
         System.out.println(studentService.getStudent(1));
         System.out.println(studentService.getAllStudents());
+    }
+
+    @Deactivate
+    public void deactivate(){
+        studentService.deleteStudent(1);
+        System.out.println("student deleted");
+        System.out.println("Service shutdown");
     }
 
 
