@@ -1,0 +1,66 @@
+plugins {
+    id 'java'
+}
+
+group 'in.ttn'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+// Ques 2  Using java plugin, make changes in the manifest to make the jar executable.
+//         Using java -jar JAR_NAME, the output should be printed as "Hello World"
+jar {
+    manifest {
+        attributes 'Main-Class': 'App'
+    }
+}
+
+//Q1 and Q3 -->
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+   // compileOnly 'org.projectlombok:lombok:1.18.8'
+  //  annotationProcessor 'org.projectlombok:lombok:1.18.8'
+
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.8.6'
+
+    testCompile 'junit:junit:4.11'
+
+    runtime 'systems.uom:systems-quantity:0.3'
+
+    runtimeOnly group: 'org.springframework', name: 'spring-core', version: '2.5'
+    runtimeOnly 'org.springframework:spring-core:2.5',
+            'org.springframework:spring-aop:2.5'
+
+
+}
+
+apply plugin: 'project-report'
+
+//Q4 -->
+class ShowDate extends DefaultTask{
+
+    String dateMessage = "Date is: "
+    @TaskAction
+    void showDate(){
+        println dateMessage + new Date()
+    }
+}
+
+task showDate(type: ShowDate)
+
+
+// Q5: Instead of using default source set, use src/main/javaCode1,
+// src/main/javaCode2 to be taken as code source. Make sure that the JAR created contains
+// files from both the directories and not from src/main/java.
+
+sourceSets {
+    main {
+        java.srcDirs = ['src/main/javaCode1', 'src/main/javaCode2']
+    }
+}
