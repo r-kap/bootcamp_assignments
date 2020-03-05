@@ -1,0 +1,7 @@
+com/configurations/ClassConfiguration.class
+com/pojos/Student.class
+com/services/ClassroomService.class
+com/services/ClassroomServiceImpl.class
+com/services/StudentClassService.class
+com/services/NewComponent.class
+com/services/StudentClassImpl.class

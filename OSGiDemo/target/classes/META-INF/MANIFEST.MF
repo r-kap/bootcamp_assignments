@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1583401940295
+Build-Jdk: 1.8.0_242
+Built-By: rohit
+Bundle-ManifestVersion: 2
+Bundle-Name: OSGiDemo
+Bundle-SymbolicName: com.bootcamp.osgi.OSGiDemo
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.services;uses:="com.pojos";version="1.0.0",com.pojos
+ ;version="1.0.0",com.configurations;version="1.0.0"
+Import-Package: com.configurations,com.pojos
+Provide-Capability: osgi.service;objectClass:List<String>="com.services.
+ ClassroomService",osgi.service;objectClass:List<String>="com.services.S
+ tudentClassService"
+Require-Capability: osgi.service;filter:="(objectClass=com.services.Clas
+ sroomService)";effective:=active,osgi.service;filter:="(objectClass=com
+ .services.StudentClassService)";effective:=active,osgi.extender;filter:
+ ="(&(osgi.extender=osgi.component)(version>=1.4.0)(!(version>=2.0.0)))"
+ ,osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Service-Component: OSGI-INF/com.services.ClassroomServiceImpl.xml,OSGI-I
+ NF/com.services.NewComponent.xml,OSGI-INF/com.services.StudentClassImpl
+ .xml
+Tool: Bnd-4.1.0.201810181252
