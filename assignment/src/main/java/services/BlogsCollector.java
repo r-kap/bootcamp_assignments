@@ -1,13 +1,12 @@
-package comps;
+package services;
 
 import org.apache.log4j.Logger;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
-import services.BlogService;
 
-@Component(name = "Blogs_Collector")
+@Component(name = "Blogs_Collector", service = BlogsCollector.class)
 public class BlogsCollector {
 
     @Reference(target = "(version=Market)")
