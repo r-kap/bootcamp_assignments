@@ -4,11 +4,11 @@ import configs.MarketBlogConfig;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.metatype.annotations.Designate;
-import services.MarketBlogService;
+import services.BlogService;
 
-@Component(name = "MarketBlog_Implementation", service = MarketBlogService.class)
+@Component(name = "MarketBlog_Implementation", service = BlogService.class, property = {"version=Market"})
 @Designate(ocd = MarketBlogConfig.class)
-public class MarketBlogImpl implements MarketBlogService {
+public class MarketBlogImpl implements BlogService {
 
     String category;
     int rank;

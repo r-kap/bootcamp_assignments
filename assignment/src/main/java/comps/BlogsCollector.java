@@ -4,19 +4,17 @@ import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
-import services.MarketBlogService;
-import services.TechBlogService;
-
-import java.sql.Ref;
+import services.BlogService;
 
 @Component(name = "Blogs_Collector")
 public class BlogsCollector {
 
-    @Reference
-    MarketBlogService marketBlog;
+    @Reference(target = "(version=Market)")
+    BlogService marketBlog;
 
-    @Reference
-    TechBlogService techBlog;
+    @Reference(target="(version=Tech)")
+    BlogService techBlog;
+
 
     @Activate
     public void activateMarket(){

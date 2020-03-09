@@ -1,6 +1,6 @@
 package services;
 
-public interface MarketBlogService {
+public interface BlogService {
 
     String getBlogCategory();
     int getRank();
