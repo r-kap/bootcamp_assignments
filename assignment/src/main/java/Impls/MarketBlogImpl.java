@@ -1,6 +1,7 @@
 package Impls;
 
 import configs.MarketBlogConfig;
+import org.apache.log4j.Logger;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.metatype.annotations.Designate;
@@ -15,7 +16,6 @@ public class MarketBlogImpl implements BlogService {
 
     @Activate
     public void activate(MarketBlogConfig marketBlogConfig) {
-        System.out.println("MarketBlog started");
         category = marketBlogConfig.blog_category();
         rank = marketBlogConfig.rank();
     }

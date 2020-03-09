@@ -1,5 +1,6 @@
 package comps;
 
+import org.apache.log4j.Logger;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
@@ -18,12 +19,16 @@ public class BlogsCollector {
 
     @Activate
     public void activateMarket(){
-        System.out.println("Blogs Collector");
-        System.out.println(marketBlog.getBlogCategory());
-        System.out.println(marketBlog.getRank());
-        System.out.println("Blogs Collector");
-        System.out.println(techBlog.getBlogCategory());
-        System.out.println(techBlog.getRank());
+
+        Logger logger = Logger.getLogger(BlogService.class);
+        logger.info("Blogs Collector");
+        logger.info("MarketBlog started");
+        logger.info(marketBlog.getBlogCategory());
+        logger.info(marketBlog.getRank());
+        logger.info("Blogs Collector");
+        logger.info("TechBlog started");
+        logger.info(techBlog.getBlogCategory());
+        logger.info(techBlog.getRank());
     }
 
     @Deactivate

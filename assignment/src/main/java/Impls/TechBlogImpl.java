@@ -9,13 +9,12 @@ import services.BlogService;
 @Component(name = "TechBlog_Implementation", immediate = true, property = {"version=Tech"})
 @Designate(ocd = TechBlogConfig.class)
 public class TechBlogImpl implements BlogService {
- 
+
     String category;
     int rank;
 
     @Activate
     public void activate(TechBlogConfig techBlogConfig){
-        System.out.println("TechBlog started");
         category = techBlogConfig.blog_category();
         rank = techBlogConfig.rank();
     }
