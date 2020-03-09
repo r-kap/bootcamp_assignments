@@ -16,23 +16,22 @@ public class BlogsCollector {
     @Reference(target="(version=Tech)")
     BlogService techBlog;
 
+    Logger logger = Logger.getLogger(BlogsCollector.class);
 
     @Activate
     public void activateMarket(){
 
-        Logger logger = Logger.getLogger(BlogService.class);
         logger.info("Blogs Collector");
-        logger.info("MarketBlog started");
         logger.info(marketBlog.getBlogCategory());
         logger.info(marketBlog.getRank());
         logger.info("Blogs Collector");
-        logger.info("TechBlog started");
         logger.info(techBlog.getBlogCategory());
         logger.info(techBlog.getRank());
     }
 
     @Deactivate
     public void deactivate(){
-        System.out.println("Service shutdown");
+
+        logger.info("Service shutdown. Bye-Bye");
     }
 }

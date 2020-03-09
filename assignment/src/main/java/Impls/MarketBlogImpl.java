@@ -16,6 +16,8 @@ public class MarketBlogImpl implements BlogService {
 
     @Activate
     public void activate(MarketBlogConfig marketBlogConfig) {
+        Logger logger = Logger.getLogger(MarketBlogImpl.class);
+        logger.info("MarketBlog started");
         category = marketBlogConfig.blog_category();
         rank = marketBlogConfig.rank();
     }
