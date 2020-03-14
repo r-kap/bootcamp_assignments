@@ -14,6 +14,8 @@ public class TechBlogImpl implements BlogService {
     String category;
     int rank;
 
+
+
     @Activate
     public void activate(TechBlogConfig techBlogConfig){
         Logger logger = Logger.getLogger(TechBlogImpl.class);
