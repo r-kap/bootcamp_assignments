@@ -6,7 +6,7 @@ import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.metatype.annotations.Designate;
 
-@Component()
+@Component
 @Designate(ocd = DemoConfig.class)
 public class DemoImplementation implements DemoService {
 
