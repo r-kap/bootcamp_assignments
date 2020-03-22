@@ -1,11 +1,11 @@
-package Impls;
+package com.ttn.bootcamp.core.impls;
 
-import configs.TechBlogConfig;
+import com.ttn.bootcamp.core.configs.TechBlogConfig;
 import org.apache.log4j.Logger;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.metatype.annotations.Designate;
-import services.BlogService;
+import com.ttn.bootcamp.core.services.BlogService;
 
 @Component(name = "TechBlog_Implementation", property = {"version=Tech"})
 @Designate(ocd = TechBlogConfig.class)

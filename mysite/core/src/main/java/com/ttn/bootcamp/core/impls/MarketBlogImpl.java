@@ -1,11 +1,11 @@
-package Impls;
+package com.ttn.bootcamp.core.impls;
 
-import configs.MarketBlogConfig;
+import com.ttn.bootcamp.core.configs.MarketBlogConfig;
 import org.apache.log4j.Logger;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.metatype.annotations.Designate;
-import services.BlogService;
+import com.ttn.bootcamp.core.services.BlogService;
 
 @Component(name = "MarketBlog_Implementation", service = BlogService.class, property = {"version=Market"})
 @Designate(ocd = MarketBlogConfig.class)
