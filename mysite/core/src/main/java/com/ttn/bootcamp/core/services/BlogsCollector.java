@@ -52,7 +52,13 @@ public class BlogsCollector{
         Collections.sort(myBlog, new Comparator<BlogService>() {
             @Override
             public int compare(BlogService o1, BlogService o2) {
-                return o1.getRank() - o2.getRank();
+                if(o1.getRank() > o2.getRank())
+                    return 1;
+                if(o1.getRank() < o2.getRank())
+                    return -1;
+                else{
+                    return o1.getBlogCategory().compareTo(o2.getBlogCategory());
+                }
             }
         });
     return myBlog;
