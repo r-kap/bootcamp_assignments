@@ -40,7 +40,9 @@ public class FetchBlogDetailsServlet extends SlingSafeMethodsServlet {
         String x;
         x = gson.toJson(marketCollector);
         x+= gson.toJson(techCollector);
+
         PrintWriter out = response.getWriter();
+        response.setContentType("text/plain");
 
         out.println(x);
 
