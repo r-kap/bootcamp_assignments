@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.ttn.bootcamp.core.impls.MarketBlogImpl;
 import com.ttn.bootcamp.core.services.BlogService;
+import com.ttn.bootcamp.core.services.BlogsCollector;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.servlets.HttpConstants;
@@ -16,6 +17,7 @@ import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 @Component(service = Servlet.class,immediate = true, property = {
         "sling.servlet.methods=GET",
@@ -26,11 +28,8 @@ import java.io.PrintWriter;
 
 public class FetchBlogDetailsServlet extends SlingSafeMethodsServlet {
 
-    @Reference(target = "(version=Market)")
-    BlogService marketCollector;
 
-    @Reference(target = "(version=Tech)")
-    public BlogService techCollector;
+    BlogsCollector blogsCollector;
 
     @Override
     protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {
@@ -38,8 +37,8 @@ public class FetchBlogDetailsServlet extends SlingSafeMethodsServlet {
 
         Gson gson = new Gson();
         String x;
-        x = gson.toJson(marketCollector);
-        x+= gson.toJson(techCollector);
+        List<BlogService> b = blogsCollector.getBlogsByRank();
+        x = gson.toJson(b);
 
         PrintWriter out = response.getWriter();
         response.setContentType("text/plain");

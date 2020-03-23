@@ -18,8 +18,6 @@ public class TechBlogImpl implements BlogService {
 
     @Activate
     public void activate(TechBlogConfig techBlogConfig){
-        Logger logger = Logger.getLogger(TechBlogImpl.class);
-        logger.info("TechBlog started");
         category = techBlogConfig.blog_category();
         rank = techBlogConfig.rank();
     }
