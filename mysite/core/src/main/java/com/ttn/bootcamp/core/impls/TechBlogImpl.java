@@ -32,4 +32,8 @@ public class TechBlogImpl implements BlogService {
         return rank;
     }
 
+    public String toString(){
+        return "Rank: "+rank+ " Category: "+ category;
+    }
+
 }

@@ -30,4 +30,8 @@ public class MarketBlogImpl implements BlogService {
     public int getRank() {
         return rank;
     }
+
+    public String toString(){
+        return "Rank: "+rank+ " Category: "+ category;
+    }
 }
