@@ -1,0 +1,10 @@
+com/ttn/bootcamp/services/BlogsCollector$1.class
+com/ttn/bootcamp/configs/TechBlogConfig.class
+com/ttn/bootcamp/services/BlogsCollector.class
+com/ttn/bootcamp/impls/TechBlogImpl.class
+com/ttn/bootcamp/services/BlogsCollector$2.class
+com/ttn/bootcamp/services/BlogService.class
+com/ttn/bootcamp/impls/MarketBlogImpl.class
+com/ttn/bootcamp/SimpleDSComponent.class
+com/ttn/bootcamp/servlets/DemoServlet.class
+com/ttn/bootcamp/configs/MarketBlogConfig.class

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.2.0" localization="OSGI-INF/l10n/com.ttn.bootcamp.configs.TechBlogConfig">
+  <OCD id="com.ttn.bootcamp.configs.TechBlogConfig" name="TechBlogConfig" description="">
+    <AD id="blogCategory" type="String" name="BlogCategory" default=""/>
+    <AD id="dateCreated" type="String" name="DateCreated"/>
+    <AD id="rank" type="Integer" name="Rank" default="0"/>
+  </OCD>
+  <Designate pid="TechBlog">
+    <Object ocdref="com.ttn.bootcamp.configs.TechBlogConfig"/>
+  </Designate>
+</metatype:MetaData>

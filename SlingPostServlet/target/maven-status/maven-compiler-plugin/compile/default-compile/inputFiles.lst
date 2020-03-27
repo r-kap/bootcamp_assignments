@@ -1,0 +1,8 @@
+/home/rohit/IdeaProjects/SlingPostServletAssignment/SlingPostServlet/src/main/java/com/ttn/bootcamp/servlets/DemoServlet.java
+/home/rohit/IdeaProjects/SlingPostServletAssignment/SlingPostServlet/src/main/java/com/ttn/bootcamp/configs/TechBlogConfig.java
+/home/rohit/IdeaProjects/SlingPostServletAssignment/SlingPostServlet/src/main/java/com/ttn/bootcamp/configs/MarketBlogConfig.java
+/home/rohit/IdeaProjects/SlingPostServletAssignment/SlingPostServlet/src/main/java/com/ttn/bootcamp/SimpleDSComponent.java
+/home/rohit/IdeaProjects/SlingPostServletAssignment/SlingPostServlet/src/main/java/com/ttn/bootcamp/services/BlogService.java
+/home/rohit/IdeaProjects/SlingPostServletAssignment/SlingPostServlet/src/main/java/com/ttn/bootcamp/services/BlogsCollector.java
+/home/rohit/IdeaProjects/SlingPostServletAssignment/SlingPostServlet/src/main/java/com/ttn/bootcamp/impls/MarketBlogImpl.java
+/home/rohit/IdeaProjects/SlingPostServletAssignment/SlingPostServlet/src/main/java/com/ttn/bootcamp/impls/TechBlogImpl.java

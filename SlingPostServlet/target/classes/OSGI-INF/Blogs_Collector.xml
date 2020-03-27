@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="Blogs_Collector" activate="activateMarket" deactivate="deactivate">
+  <implementation class="com.ttn.bootcamp.services.BlogsCollector"/>
+  <service>
+    <provide interface="com.ttn.bootcamp.services.BlogsCollector"/>
+  </service>
+  <reference name="marketBlog" interface="com.ttn.bootcamp.services.BlogService" target="(version=Market)" field="marketBlog"/>
+  <reference name="techBlog" interface="com.ttn.bootcamp.services.BlogService" target="(version=Tech)" field="techBlog"/>
+</scr:component>
