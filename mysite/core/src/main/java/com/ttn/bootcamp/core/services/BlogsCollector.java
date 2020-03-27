@@ -6,10 +6,8 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @Component(name = "Blogs_Collector", service = BlogsCollector.class)
 
@@ -45,6 +43,8 @@ public class BlogsCollector{
 
         //logger.info(myBlog);
     }
+
+
 
 
     public List<BlogService> getBlogsByRank() {
