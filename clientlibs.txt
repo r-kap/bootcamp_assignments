@@ -1,0 +1,14 @@
+Question 1:
+
+I had created the the custom component "testComponent".
+
+Question 2:
+
+Two Network call will be there one for clientlibs-dependencies and second for clientlibs-base.js in which I had embed clientlib-embed.
+
+Queston 3:
+
+There are 3 clientlibs clientlib_1,clientlib_2 and clientlib_3.
+
+Observation:
+Network call will be One but It will load the content of clientlib_2 only which means emded will be done only at the one level.
