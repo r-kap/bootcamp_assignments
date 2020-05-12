@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/DAM_Assignment" mode="merge"/>
+    <filter root="/content/DAM_Assignment" mode="merge"/>
+    <filter root="/content/dam/DAM_Assignment" mode="merge"/>
+    <filter root="/content/experience-fragments/DAM_Assignment" mode="merge"/>
+</workspaceFilter>
